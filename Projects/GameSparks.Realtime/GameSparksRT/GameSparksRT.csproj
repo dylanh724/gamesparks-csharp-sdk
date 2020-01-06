@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{CA834056-33D6-4998-AA35-2E38FF51D33B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GameSparks.RT</RootNamespace>
+    <AssemblyName>GameSparksRT</AssemblyName>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>True</Externalconsole>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>..\..\GameSparksUnity\Assets\GameSparks\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+    <DocumentationFile>GameSparksRT.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Proto\Packet.cs" />
+    <Compile Include="Proto\Packet.Serializer.cs" />
+    <Compile Include="Proto\ProtocolParser.cs" />
+    <Compile Include="Proto\CoreCommands.cs" />
+    <Compile Include="Proto\LimitedPositionStream.cs" />
+    <Compile Include="Pools\PooledObjects.cs" />
+    <Compile Include="Pools\ObjectPool.cs" />
+    <Compile Include="IRTSessionListener.cs" />
+    <Compile Include="IRTSession.cs" />
+    <Compile Include="Commands\CommandFactory.cs" />
+    <Compile Include="RTSessionImpl.cs" />
+    <Compile Include="IRTSessionInternal.cs" />
+    <Compile Include="Proto\PositionStream.cs" />
+    <Compile Include="Proto\ProtocolBufferException.cs" />
+    <Compile Include="Connection\Connection.cs" />
+    <Compile Include="Connection\FastConnection.cs" />
+    <Compile Include="Connection\ReliableConnection.cs" />
+    <Compile Include="GameSparksRT.cs" />
+    <Compile Include="IRTCommand.cs" />
+    <Compile Include="Commands\LogCommand.cs" />
+    <Compile Include="Commands\Results\LoginResult.cs" />
+    <Compile Include="Commands\Results\PingResult.cs" />
+    <Compile Include="Commands\Requests\RTRequest.cs" />
+    <Compile Include="Commands\Results\UDPConnectMessage.cs" />
+    <Compile Include="Commands\Requests\CustomRequest.cs" />
+    <Compile Include="Commands\Requests\LoginCommand.cs" />
+    <Compile Include="Commands\Requests\PingCommand.cs" />
+    <Compile Include="Commands\Results\PlayerConnectMessage.cs" />
+    <Compile Include="Commands\Results\PlayerDisconnectMessage.cs" />
+    <Compile Include="Commands\Results\AbstractResult.cs" />
+    <Compile Include="Commands\ActionCommand.cs" />
+    <Compile Include="Proto\CoreCommands.Serializer.cs" />
+    <Compile Include="Proto\Packet.Ext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proto\ReusableBinaryWriter.cs" />
+    <Compile Include="Proto\RTData.Serializer.cs" />
+    <Compile Include="RTData.cs" />
+    <Compile Include="Commands\CustomCommand.cs" />
+    <Compile Include="..\..\GameSparks.Shared\TlsClient.cs">
+      <Link>TlsClient.cs</Link>
+    </Compile>
+    <Compile Include="Connection\ReliableWSConnection.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="libs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+ 
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\GameSparks\GameSparks.csproj">
+      <Project>{A6CB2AC7-B8B1-454A-9EB6-1053071DE7B2}</Project>
+      <Name>GameSparks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\bccrypto-csharp-1.8.1\crypto\BouncyCastle_GameSparks.csproj">
+      <Project>{4C235092-820C-4DEB-9074-D356FB797D8B}</Project>
+      <Name>BouncyCastle_GameSparks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GameSparks.Api\GameSparks.Api.csproj">
+      <Project>{3CFC6BF3-709C-467D-81C9-6C00B54AC029}</Project>
+      <Name>GameSparks.Api</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

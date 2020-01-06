@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{3CFC6BF3-709C-467D-81C9-6C00B54AC029}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GameSparks.Api</RootNamespace>
+    <AssemblyName>GameSparks.Api</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\GameSparksUnity\Assets\GameSparks\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>GameSparks.Api.XML</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\FileDownloader.cs" />
+    <Compile Include="Core\FileUploader.cs" />
+    <Compile Include="Core\GameSparksFormUpload.cs" />
+    <Compile Include="Core\GSEnumerable.cs" />
+    <Compile Include="Core\GSInstance.cs" />
+    <Compile Include="Core\GSObject.cs" />
+    <Compile Include="Core\GSRequestData.cs" />
+    <Compile Include="Core\IGSData.cs" />
+    <Compile Include="Core\Version.cs" />
+    <Compile Include="Messages\GSMessage.cs" />
+    <Compile Include="Requests\CustomRequest.cs" />
+    <Compile Include="Responses\CustomResponse.cs" />
+    <Compile Include="Core\GSTypedResponse.cs" />
+    <Compile Include="Core\GSTypedRequest.cs" />
+    <Compile Include="GSMessages.cs" />
+    <Compile Include="GSRequests.cs" />
+    <Compile Include="GSResponses.cs" />
+    <Compile Include="Core\GS.cs" />
+    <Compile Include="Core\GSConnection.cs" />
+    <Compile Include="Core\GSData.cs" />
+    <Compile Include="Core\GSJson.cs" />
+    <Compile Include="Core\GSRequest.cs" />
+    <Compile Include="Core\IGameSparksPlatform.cs" />
+    <Compile Include="GSHelper.cs" />
+    <Compile Include="GSMessageHandler.cs" />
+    <Compile Include="QueuePersistor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameSparks\GameSparks.csproj">
+      <Project>{A6CB2AC7-B8B1-454A-9EB6-1053071DE7B2}</Project>
+      <Name>GameSparks</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

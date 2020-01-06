@@ -1,0 +1,35 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BouncyCastle_GameSparks", "Projects\bccrypto-csharp-1.8.1\crypto\BouncyCastle_GameSparks.csproj", "{4C235092-820C-4DEB-9074-D356FB797D8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameSparks", "Projects\GameSparks\GameSparks.csproj", "{A6CB2AC7-B8B1-454A-9EB6-1053071DE7B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameSparks.Api", "Projects\GameSparks.Api\GameSparks.Api.csproj", "{3CFC6BF3-709C-467D-81C9-6C00B54AC029}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameSparksRT", "Projects\GameSparks.Realtime\GameSparksRT\GameSparksRT.csproj", "{CA834056-33D6-4998-AA35-2E38FF51D33B}"
+EndProject
+Global
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C235092-820C-4DEB-9074-D356FB797D8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C235092-820C-4DEB-9074-D356FB797D8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C235092-820C-4DEB-9074-D356FB797D8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C235092-820C-4DEB-9074-D356FB797D8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6CB2AC7-B8B1-454A-9EB6-1053071DE7B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6CB2AC7-B8B1-454A-9EB6-1053071DE7B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6CB2AC7-B8B1-454A-9EB6-1053071DE7B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6CB2AC7-B8B1-454A-9EB6-1053071DE7B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CFC6BF3-709C-467D-81C9-6C00B54AC029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CFC6BF3-709C-467D-81C9-6C00B54AC029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CFC6BF3-709C-467D-81C9-6C00B54AC029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CFC6BF3-709C-467D-81C9-6C00B54AC029}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA834056-33D6-4998-AA35-2E38FF51D33B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA834056-33D6-4998-AA35-2E38FF51D33B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA834056-33D6-4998-AA35-2E38FF51D33B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA834056-33D6-4998-AA35-2E38FF51D33B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+EndGlobal
